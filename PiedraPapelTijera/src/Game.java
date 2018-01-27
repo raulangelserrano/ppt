@@ -1,7 +1,7 @@
 /**
  * Clase principal.
- * Versi√≥n 1.0
- * Autor: Profesor Entorno Desarrollo
+ * 
+ * Autor: Raul Serrano S·nchez
  */
 public class Game {
 
