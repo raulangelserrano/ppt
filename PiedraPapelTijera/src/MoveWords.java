@@ -5,8 +5,16 @@ public class MoveWords{
     public static final int EMPATE = 0;
     public static final int GANA = 1;
     public static final int PIERDE = 2;
+    
+    /**
+     * Añadimos las nuevas opciones al array de posiciones
+     * ES MUY IMPORTANTE, el orden ya que dedidirá que opción gana según la posición que ocupa
+     * En la opción sencilla cada opción gana a la siguiente.
+     * En la ampliada cada opción gana a la siguiente y la que ocupe 3 posiciones más
+     * Esto lo contemplaremos modificando el método checkWinner
+     */
 
-    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA"};
+    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA","LAGARTIJA","SPOCK"};
     private static final String[] validCommands = {"SALIR", "HELP"};
 
     private Random rnd;
@@ -67,7 +75,12 @@ public class MoveWords{
 
 	    if (first_i == second_i) return EMPATE;
 	    
-	    return (( (first_i +1) % validMoves.length ) == second_i ) ? GANA: PIERDE;
+	    /**
+	     * Añadimos la condición con un or, de estar 3 posiciones después.
+	     */
+	    
+	    
+	    return (( (first_i +1) % validMoves.length ) == second_i  ||  ((first_i +3) % validMoves.length)  == second_i )? GANA: PIERDE;
 	}
 	
 } 
