@@ -14,7 +14,7 @@ public class MoveWords{
      * Esto lo contemplaremos modificando el método checkWinner
      */
 
-    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA","LAGARTIJA","SPOCK"};
+    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA","LAGARTIJA","TORITO"};
     private static final String[] validCommands = {"SALIR", "HELP"};
 
     private Random rnd;
